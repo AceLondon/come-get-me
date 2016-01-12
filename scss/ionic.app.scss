@@ -1,0 +1,160 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+// [ng\:cloak], [ng-cloak], .ng-cloak { display: none; }
+
+.button-container{
+    display:inline-block;
+    position: relative;
+    width:100%;
+
+    .come-get-me-button {
+        width: 130px;
+        height: 130px;
+        margin-left: calc(50% - 65px);
+        margin-right: calc(50% - 65px);
+        border-radius: 75px;
+        box-shadow: 0px 0px 30px black;
+
+        &:active, &:hover{
+            box-shadow: 0px 0px 15px black;
+        }
+
+    }
+    .full-sized:before{
+        font-size: 150px;
+        color: $dark;
+        margin-left:-17px;
+        margin-top:2px;
+        text-shadow: 0px 0px 0px white;
+
+    }
+    .full-sized:after{
+        background-color: $calm;
+        border-radius: 50%;
+        width:57px;
+        height:57px;
+        margin-top: 41px;
+        margin-left: 42px;
+        border-style: inset;
+        border-width: medium;
+        border-color: rgba(#000, 0.6);
+    }
+
+    h3{
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+}
+
+.list.card.item{
+    padding-right: 0px;
+}
+
+a[href^=tel]{
+    text-decoration: none !important;
+    color:white !important;
+}
+
+.contact-card{
+    p{
+        overflow: visible;
+        text-overflow: inherit;
+        white-space: pre;
+        a,
+        a:hover,
+        a:focus,
+        a:visited{
+            text-decoration: none !important;
+            color:white !important;
+        }
+    }
+    &.contacting{
+        h2{
+            color:$assertive;
+            font-size:20px;
+        }
+        p{
+            color:white;
+        }
+    }
+}
+
+.delete-contact{
+    float: right;
+    min-height: 0px;
+    height: 30px;
+    margin-top: -7px;
+    margin-bottom: -4px;
+    margin-right: -15px;
+    overflow: visible;
+    display: none;
+
+    &:before{
+        font-size: 28px !important;
+        line-height: normal !important;
+        color:$assertive;
+        overflow: visible;
+        display: none;
+    }
+}
+
+.blink_text {
+-webkit-animation-name: blinker;
+-webkit-animation-duration: 2s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+
+-moz-animation-name: blinker;
+-moz-animation-duration: 2s;
+-moz-animation-timing-function: linear;
+-moz-animation-iteration-count: infinite;
+
+ animation-name: blinker;
+ animation-duration: 2s;
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+
+ // color: red;
+}
+
+@-moz-keyframes blinker {
+ 20% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 80% { opacity: 1.0; }
+ }
+
+@-webkit-keyframes blinker {
+ 20% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 80% { opacity: 1.0; }
+ }
+
+@keyframes blinker {
+ 20% { opacity: 1.0; }
+ 50% { opacity: 0.0; }
+ 80% { opacity: 1.0; }
+ }

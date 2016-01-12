@@ -1,0 +1,48 @@
+<ion-view title="Settings">
+    <ion-content overflow-scroll="true" padding="true" class="has-header dark-bg">
+        <ion-list>
+            <ion-item class="list card contact-card">
+                <ion-item class="item-divider">
+                    Primary Contact
+                    <button ng-show="primary" class="button button-icon icon ion-ios-minus delete-contact" ng-click="deleteContact('primary')" ng-cloak></button>
+                </ion-item>
+                <ion-item ng-show="primary" class="item-thumbnail-left">
+                    <img class="ion-avitar">
+                    <h2>{{primary.name.formatted}}</h2>
+                    <a ng-href="tel:{{primary.phoneNumbers[0].value}}" class="phone">{{formatTel(primary.phoneNumbers[0].value)}}</a>
+                    <p class="address">{{formatAddress('primary')}}</p>
+
+                </ion-item>
+                <ion-item ng-hide="primary" class="add-contact">
+                    <button class="button button-block button-calm icon-right ion-ios-plus-outline"
+                     ng-click="makeContact('primary')">
+                        Add A Contact
+                    </button>
+                </ion-item>
+
+            </ion-item>
+
+            <ion-item class="list card contact-card">
+                <ion-item class="item-divider">
+                    Secondary Contact
+                    <button ng-show="secondary" class="button button-icon icon ion-ios-minus delete-contact" ng-click="deleteContact('secondary')" ng-cloak></button>
+                </ion-item>
+                <ion-item ng-show="secondary" class="item-thumbnail-left">
+                    <img class="ion-avitar">
+                    <h2>{{secondary.name.formatted}}<</h2>
+                    <a ng-href="tel:{{secondary.phoneNumbers[0].value}}" class="phone">{{formatTel(secondary.phoneNumbers[0].value)}}</a>
+                    <p class="address">{{formatAddress('secondary')}}</p>
+
+
+                </ion-item>
+                <ion-item ng-hide="secondary" class="add-contact">
+                    <button class="button button-block button-calm icon-right ion-ios-plus-outline"
+                      ng-click="makeContact('secondary')">
+                        Add A Contact
+                    </button>
+                </ion-item>
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

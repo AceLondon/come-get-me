@@ -1,0 +1,22 @@
+<ion-view title="Come Get Me" class="">
+    <ion-content overflow-scroll="true" padding="true" scroll="false" class="has-header" ng-class="isContacting ? 'assertive-bg' : 'calm-bg'">
+        <div class="spacer" style="width: 300px; height: 100px;"></div>
+        <div class="button-container">
+            <h3>Come Get Me</h3>
+            <button class="button button-assertive button-large icon ion-help-buoy full-sized come-get-me-button"
+             ng-click="startIt()"></button>
+        </div>
+        <ion-item ng-show="isContacting" class="list card contact-card contacting">
+            <ion-item class="item-divider calm-bg">
+                Contacting: Primary Contact
+                <button class="button button-icon icon ion-close-circled delete-contact" ng-click="stopIt()"></button>
+            </ion-item>
+            <ion-item class="item-thumbnail-left dark-bg">
+                <img class="ion-avitar">
+                <h2>{{primary.name.formatted}}</h2>
+                <p class="blink_text">{{primary.phoneNumbers[0].type + ': ' + formatTel(primary.phoneNumbers[0].value)}}</p>
+                <p class="address">{{formatAddress('primary')}}</p>
+
+        </ion-item>
+    </ion-content>
+</ion-view>

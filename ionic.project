@@ -1,0 +1,12 @@
+{
+  "name": "come-get-me",
+  "app_id": "de4b239b",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
